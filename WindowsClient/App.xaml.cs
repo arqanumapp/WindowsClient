@@ -3,7 +3,10 @@ using CoreLib.Helpers;
 using CoreLib.Notifications;
 using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
+using System.Windows.Controls;
 using WindowsClient.CoreImplementations;
+using WindowsClient.Services;
+using WindowsClient.Views;
 
 namespace WindowsClient;
 
@@ -16,16 +19,30 @@ public partial class App : Application
         base.OnStartup(e);
 
         var services = new ServiceCollection();
+
         services.AddSingleton<IDeviceInfoProvider, DeviceInfoProvider>();
         services.AddSingleton<INotificationDisplayService, NotificationDisplayService>();
         services.AddArqanumCore();
 
-        services.AddTransient<MainWindow>();
+        var contentControl = new ContentControl();
 
-        _serviceProvider = services.BuildServiceProvider();
-        var mainWindow = _serviceProvider.GetRequiredService<MainWindow>();
+        services.AddSingleton(contentControl);
+
+        services.AddSingleton<INavigationService>(sp =>
+            new NavigationService(sp, sp.GetRequiredService<ContentControl>()));
+
+        services.AddTransient<WelcomePage>();
+        services.AddTransient<CreateAccountPage>();
+
+        services.AddSingleton<MainWindow>();
+
+        var serviceProvider = services.BuildServiceProvider();
+
+        var mainWindow = serviceProvider.GetRequiredService<MainWindow>();
         mainWindow.Show();
     }
+
+
 
 
 }

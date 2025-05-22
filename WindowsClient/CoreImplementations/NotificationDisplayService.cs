@@ -6,7 +6,8 @@ namespace WindowsClient.CoreImplementations
     {
         public Task ShowNotificationAsync(string data)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Hello");
+            return Task.CompletedTask;
         }
     }
 }
