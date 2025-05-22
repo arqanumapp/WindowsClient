@@ -5,6 +5,8 @@ VisualStudioVersion = 17.13.35825.156 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsClient", "WindowsClient\WindowsClient.csproj", "{D6F69157-E882-4CC7-AD01-E7E0EE1AF1C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreLib", "..\CoreLib\CoreLib.csproj", "{3922089C-2EB6-9298-6AF6-8C8C6B64FA9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D6F69157-E882-4CC7-AD01-E7E0EE1AF1C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6F69157-E882-4CC7-AD01-E7E0EE1AF1C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6F69157-E882-4CC7-AD01-E7E0EE1AF1C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3922089C-2EB6-9298-6AF6-8C8C6B64FA9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3922089C-2EB6-9298-6AF6-8C8C6B64FA9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3922089C-2EB6-9298-6AF6-8C8C6B64FA9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3922089C-2EB6-9298-6AF6-8C8C6B64FA9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
