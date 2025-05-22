@@ -1,4 +1,5 @@
 ﻿using CoreLib.Helpers;
+using System.Runtime.InteropServices;
 
 namespace WindowsClient.CoreImplementations
 {
@@ -6,7 +7,11 @@ namespace WindowsClient.CoreImplementations
     {
         public Task<string> GetDeviceName()
         {
-            throw new NotImplementedException();
+            string machineName = Environment.MachineName;
+            string osDescription = RuntimeInformation.OSDescription;
+
+            string result = $"{machineName} ({osDescription})";
+            return Task.FromResult(result);
         }
     }
 }
