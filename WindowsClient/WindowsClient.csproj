@@ -7,10 +7,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
     <SupportedOSPlatformVersion>10.0.26100.0</SupportedOSPlatformVersion>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resourses\Img\Logo\logo.png" />
     <None Remove="Resourses\Img\welcome-image.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="logo.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,10 +32,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Resourses\Img\Logo\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <Resource Include="Resourses\Img\Logo\logo.png">
+    </Resource>
     <Resource Include="Resourses\Img\welcome-image.png" />
   </ItemGroup>
 

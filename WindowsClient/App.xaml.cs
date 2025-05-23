@@ -25,6 +25,7 @@ public partial class App : Application
         services.AddSingleton<ICaptchaTokenProvider, CaptchaTokenProvider>();
         services.AddArqanumCore();
 
+        services.AddTransient<IQrCodeService, QrCodeService>();
         var contentControl = new ContentControl();
 
         services.AddSingleton(contentControl);
@@ -34,6 +35,8 @@ public partial class App : Application
 
         services.AddTransient<WelcomePage>();
         services.AddTransient<CreateAccountPage>();
+        services.AddTransient<SignWithQrPage>();
+
 
         services.AddSingleton<MainWindow>();
 

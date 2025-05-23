@@ -15,7 +15,7 @@ namespace WindowsClient.Views
         }
         private void SignIn_Click(object sender, RoutedEventArgs e)
         {
-            //TODO: Implement SignIn functionality
+            _navigationService.NavigateTo<SignWithQrPage>();
         }
         private void CreateAccount_Click(object sender, RoutedEventArgs e)
         {
