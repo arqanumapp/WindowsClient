@@ -1,6 +1,5 @@
 ﻿using CoreLib;
-using CoreLib.Helpers;
-using CoreLib.Notifications;
+using CoreLib.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,6 +22,7 @@ public partial class App : Application
         services.AddSingleton<IDeviceInfoProvider, DeviceInfoProvider>();
         services.AddSingleton<INotificationDisplayService, NotificationDisplayService>();
         services.AddSingleton<IDatabasePasswordProvider, DatabasePasswordProvider>();
+        services.AddSingleton<ICaptchaTokenProvider, CaptchaTokenProvider>();
         services.AddArqanumCore();
 
         var contentControl = new ContentControl();

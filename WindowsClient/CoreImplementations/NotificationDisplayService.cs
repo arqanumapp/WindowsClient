@@ -1,4 +1,4 @@
-﻿using CoreLib.Notifications;
+﻿using CoreLib.Interfaces;
 
 namespace WindowsClient.CoreImplementations
 {

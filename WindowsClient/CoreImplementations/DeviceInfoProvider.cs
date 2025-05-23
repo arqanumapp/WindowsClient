@@ -1,4 +1,4 @@
-﻿using CoreLib.Helpers;
+﻿using CoreLib.Interfaces;
 using System.Runtime.InteropServices;
 
 namespace WindowsClient.CoreImplementations
