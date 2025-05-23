@@ -13,7 +13,10 @@ namespace WindowsClient.Views
             InitializeComponent();
             _navigationService = navigationService;
         }
-
+        private void SignIn_Click(object sender, RoutedEventArgs e)
+        {
+            //TODO: Implement SignIn functionality
+        }
         private void CreateAccount_Click(object sender, RoutedEventArgs e)
         {
             _navigationService.NavigateTo<CreateAccountPage>();

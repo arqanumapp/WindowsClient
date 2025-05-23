@@ -8,12 +8,18 @@
 
     <Grid Background="White" >
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" >
-            <TextBlock Text="Создание аккаунта" FontSize="20" FontWeight="Bold" TextAlignment="Center" />
+            <TextBlock Text="Create an account" FontSize="20" FontWeight="Bold" TextAlignment="Center" />
 
-            <TextBox x:Name="NicknameTextBox" Height="30"  />
+            <TextBox x:Name="NicknameTextBox" Height="30" TextChanged="NicknameTextBox_TextChanged"/>
+            <TextBlock x:Name="NicknameErrorTextBlock"
+               Foreground="Red"
+               FontSize="12"
+               Visibility="Hidden"
+               Margin="0,5,0,0"/>
+            <Button x:Name="ContinueButton" Content="Continue" Height="40" Click="Continue_Click" />
+            <Button Content="Back" Height="30" Click="Back_Click" />
+            <TextBlock x:Name="StatusTextBlock" Margin="10" FontSize="14" Foreground="Gray"/>
 
-            <Button Content="Продолжить" Height="40" Click="Continue_Click" />
-            <Button Content="Назад" Height="30" Click="Back_Click" />
         </StackPanel>
     </Grid>
 </UserControl>

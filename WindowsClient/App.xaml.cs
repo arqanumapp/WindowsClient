@@ -22,6 +22,7 @@ public partial class App : Application
 
         services.AddSingleton<IDeviceInfoProvider, DeviceInfoProvider>();
         services.AddSingleton<INotificationDisplayService, NotificationDisplayService>();
+        services.AddSingleton<IDatabasePasswordProvider, DatabasePasswordProvider>();
         services.AddArqanumCore();
 
         var contentControl = new ContentControl();

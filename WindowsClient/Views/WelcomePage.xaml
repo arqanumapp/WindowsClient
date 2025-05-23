@@ -9,7 +9,10 @@
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" >
             <TextBlock Text="Welcome to Arqanum" FontSize="20" FontWeight="Bold" TextAlignment="Center" />
 
+            <Button Content="Sign In" Height="40" Click="SignIn_Click" />
+            
             <Button Content="Create account" Height="40" Click="CreateAccount_Click" />
+           
         </StackPanel>
     </Grid>
 </UserControl>
