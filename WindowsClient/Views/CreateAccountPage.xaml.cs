@@ -1,6 +1,7 @@
 ﻿using CoreLib.Services.Account;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using WindowsClient.Services;
 
 namespace WindowsClient.Views
@@ -34,9 +35,12 @@ namespace WindowsClient.Views
             }
 
             ContinueButton.IsEnabled = false;
+            BackButton.IsEnabled = false;
+            NicknameErrorTextBlock.IsEnabled = false;
 
             var progress = new Progress<string>(message =>
             {
+                StatusTextBlock.Foreground = Brushes.Gray;
                 StatusTextBlock.Text = message;
             });
 
@@ -50,16 +54,21 @@ namespace WindowsClient.Views
                 }
                 else
                 {
-                    MessageBox.Show("Error creating account.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    StatusTextBlock.Foreground = Brushes.Red;
+                    StatusTextBlock.Text = "Error creating account. Try again";
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                StatusTextBlock.Foreground = Brushes.Red;
+                StatusTextBlock.Text = "Error creating account. Try again";
             }
             finally
             {
+                ContinueButton.Content = "Try again";
                 ContinueButton.IsEnabled = true;
+                BackButton.IsEnabled = true;
+                NicknameErrorTextBlock.IsEnabled = true;
             }
         }
         private void NicknameTextBox_TextChanged(object sender, TextChangedEventArgs e)
