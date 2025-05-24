@@ -5,7 +5,7 @@ using System.Windows;
 using System.Windows.Controls;
 using WindowsClient.CoreImplementations;
 using WindowsClient.Services;
-using WindowsClient.Views;
+using WindowsClient.Views.SignInPages;
 
 namespace WindowsClient;
 
@@ -36,6 +36,7 @@ public partial class App : Application
         services.AddTransient<WelcomePage>();
         services.AddTransient<CreateAccountPage>();
         services.AddTransient<SignWithQrPage>();
+        services.AddTransient<SelectSignInMethodPage>();
 
 
         services.AddSingleton<MainWindow>();

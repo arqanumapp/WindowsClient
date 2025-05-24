@@ -2,23 +2,26 @@
 using System.Windows.Controls;
 using WindowsClient.Services;
 
-namespace WindowsClient.Views
+namespace WindowsClient.Views.SignInPages
 {
-    public partial class SignWithQrPage : UserControl
+
+    public partial class SelectSignInMethodPage : UserControl
     {
-        private readonly IQrCodeService _qrCodeService;
         private readonly INavigationService _navigationService;
-        public SignWithQrPage(INavigationService navigationService, IQrCodeService qrCodeService)
+        public SelectSignInMethodPage(INavigationService navigationService)
         {
             InitializeComponent();
             _navigationService = navigationService;
-            _qrCodeService = qrCodeService;
-            QrImage.Source = _qrCodeService.GenerateQrCode("Привет");
         }
-
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             _navigationService.NavigateTo<WelcomePage>();
         }
+
+        private void QrContinue_Click(object sender, RoutedEventArgs e)
+        {
+            _navigationService.NavigateTo<SignWithQrPage>();
+        }
+
     }
 }

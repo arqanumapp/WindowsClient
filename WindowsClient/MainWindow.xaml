@@ -4,7 +4,8 @@
         Title="Arqanum" Height="700" Width="1000"
         WindowStartupLocation="CenterScreen"
         MinWidth="1000"
-        MinHeight="700">
+        MinHeight="700"
+        Style="{StaticResource MaterialDesignWindow}">
     <Grid>
         <ContentControl x:Name="MainContentControl"/>
     </Grid>

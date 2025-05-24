@@ -4,7 +4,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using WindowsClient.Services;
 
-namespace WindowsClient.Views
+namespace WindowsClient.Views.SignInPages
 {
     public partial class CreateAccountPage : UserControl
     {

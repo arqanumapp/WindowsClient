@@ -31,6 +31,7 @@ namespace WindowsClient.Services
                 iconBorderWidth : 15,                           
                 iconBackgroundColor: Color.White            
             );
+
             using var memory = new MemoryStream();
             qrBitmap.Save(memory, ImageFormat.Png);
             memory.Position = 0;
@@ -45,7 +46,7 @@ namespace WindowsClient.Services
 
         private System.Drawing.Bitmap BitmapFromResource()
         {
-            var uri = new Uri("pack://application:,,,/Resourses/Img/Logo/logo.png", UriKind.Absolute);
+            var uri = new Uri("pack://application:,,,/Resources/Img/Logo/logo.png", UriKind.Absolute);
             var bitmapImage = new BitmapImage(uri);
 
             using var memoryStream = new MemoryStream();

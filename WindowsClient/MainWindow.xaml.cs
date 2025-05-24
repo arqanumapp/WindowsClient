@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using WindowsClient.Services;
-using WindowsClient.Views;
+using WindowsClient.Views.SignInPages;
 
 namespace WindowsClient
 {
