@@ -26,7 +26,7 @@ namespace WindowsClient.Windows
             }
             else
             {
-                MessageBox.Show($"Ошибка загрузки страницы: {e.WebErrorStatus}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Error loading captcha: {e.WebErrorStatus}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void CoreWebView2_WebMessageReceived(object? sender, CoreWebView2WebMessageReceivedEventArgs e)

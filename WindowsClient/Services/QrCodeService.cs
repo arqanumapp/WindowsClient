@@ -55,7 +55,7 @@ namespace WindowsClient.Services
             encoder.Save(memoryStream);
             memoryStream.Position = 0;
 
-            return new System.Drawing.Bitmap(memoryStream);
+            return new Bitmap(memoryStream);
         }
 
 

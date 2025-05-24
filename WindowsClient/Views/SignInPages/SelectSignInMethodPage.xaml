@@ -27,8 +27,8 @@
                 </Grid.RowDefinitions>
 
                 <Grid HorizontalAlignment="Center"
-              VerticalAlignment="Center"
-              Grid.Row="0">
+                    VerticalAlignment="Center"
+                    Grid.Row="0">
                     <Grid Width="600">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
@@ -76,13 +76,13 @@
                 </Grid>
 
                 <Button Width="100"
-        Height="35"
-        HorizontalAlignment="Right"
-        VerticalAlignment="Bottom"
-        Grid.Row="1"
-        Margin="0,20,0,0"
-        Click="BackButton_Click"
-        Style="{DynamicResource WhiteLgButton}">
+                    Height="35"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Grid.Row="1"
+                    Margin="0,20,0,0"
+                    Click="BackButton_Click"
+                    Style="{DynamicResource WhiteLgButton}">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <TextBlock Text="←" FontSize="16" Margin="0,0,5,0"/>
                         <TextBlock Text="Back"/>
