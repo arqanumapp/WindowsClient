@@ -1,10 +1,13 @@
 ﻿using CoreLib;
 using CoreLib.Interfaces;
+using CoreLib.Storage;
 using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
 using System.Windows.Controls;
 using WindowsClient.CoreImplementations;
 using WindowsClient.Services;
+using WindowsClient.Views.Controls;
+using WindowsClient.Views.MessengerPages;
 using WindowsClient.Views.SignInPages;
 
 namespace WindowsClient;
@@ -38,11 +41,15 @@ public partial class App : Application
         services.AddTransient<SignWithQrPage>();
         services.AddTransient<SelectSignInMethodPage>();
 
+        services.AddSingleton<MainMessengerControl>();
+        services.AddTransient<ChatsControl>();
+        services.AddTransient<SettingsControl>();
+        services.AddTransient<AccountControl>();
+
 
         services.AddSingleton<MainWindow>();
 
         var serviceProvider = services.BuildServiceProvider();
-
         var mainWindow = serviceProvider.GetRequiredService<MainWindow>();
         mainWindow.Show();
     }
