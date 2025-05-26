@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using WindowsClient.CoreImplementations;
 using WindowsClient.Services;
 using WindowsClient.Views.Controls;
+using WindowsClient.Views.Controls.Settings;
 using WindowsClient.Views.MessengerPages;
 using WindowsClient.Views.SignInPages;
 

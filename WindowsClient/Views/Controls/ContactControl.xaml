@@ -4,9 +4,65 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WindowsClient.Views.Controls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+             d:DesignHeight="450" d:DesignWidth="800"
+             Background="Black">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок + кнопка -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+            <TextBlock Text="Contacts"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       Foreground="White"
+                       VerticalAlignment="Center"/>
+
+            <Button Width="32" Height="32"
+                    Margin="10,0,0,0"
+                    ToolTip="Add contact"
+                    Cursor="Hand"
+                    Style="{DynamicResource HeaderActionButton}">
+                <materialDesign:PackIcon Kind="Plus" Foreground="White" Width="16" Height="16"/>
+            </Button>
+        </StackPanel>
+
+        <!-- Контакты и запросы -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Левая колонка -->
+            <StackPanel Grid.Column="0">
+                <TextBlock Text="Contacts"
+                           FontSize="18"
+                           FontWeight="SemiBold"
+                           Foreground="White"
+                           Margin="0,0,0,10"/>
+                <TextBlock Text="(Contacts list placeholder)"
+                           Foreground="Gray"
+                           FontSize="14"
+                           FontStyle="Italic"/>
+            </StackPanel>
+
+            <!-- Правая колонка -->
+            <StackPanel Grid.Column="1">
+                <TextBlock Text="Requests"
+                           FontSize="18"
+                           FontWeight="SemiBold"
+                           Foreground="White"
+                           Margin="0,0,0,10"/>
+                <TextBlock Text="(Requests list placeholder)"
+                           Foreground="Gray"
+                           FontSize="14"
+                           FontStyle="Italic"/>
+            </StackPanel>
+        </Grid>
     </Grid>
 </UserControl>

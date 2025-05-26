@@ -1,14 +1,19 @@
-﻿using System.Windows;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System.Windows;
 using System.Windows.Controls;
 using WindowsClient.Views.Controls;
+using WindowsClient.Views.Controls.Settings;
 
 namespace WindowsClient.Views.MessengerPages
 {
     public partial class MainMessengerControl : UserControl
     {
-        public MainMessengerControl()
+        private readonly IServiceProvider _serviceProvider;
+
+        public MainMessengerControl(IServiceProvider serviceProvider)
         {
             InitializeComponent();
+            _serviceProvider = serviceProvider;
             ContentArea.Content = new ChatsControl();
         }
 
@@ -24,7 +29,7 @@ namespace WindowsClient.Views.MessengerPages
 
         private void Account_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            ContentArea.Content = new AccountControl();
+            ContentArea.Content = _serviceProvider.GetRequiredService<AccountControl>();
         }
 
         private void Contacts_Click(object sender, RoutedEventArgs e)

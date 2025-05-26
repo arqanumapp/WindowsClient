@@ -9,9 +9,9 @@ namespace WindowsClient.Views.SignInPages
     public partial class CreateAccountPage : UserControl
     {
         private readonly INavigationService _navigationService;
-        private readonly CreateAccountService createAccountService;
+        private readonly AccountService createAccountService;
 
-        public CreateAccountPage(INavigationService navigationService, CreateAccountService createAccountService)
+        public CreateAccountPage(INavigationService navigationService, AccountService createAccountService)
         {
             InitializeComponent();
             _navigationService = navigationService;
